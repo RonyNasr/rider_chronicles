@@ -1,8 +1,26 @@
-<%= render "layouts/errors", :object => @user %>
+<%= render "layouts/errors", :object => @bike %>
 
 
-<%= form_for @user do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= form_for [@user, @bike] do |f| %>
+  <%= f.label :make %>
+  <%= f.text_field :make %>
+  <%= f.label :model %>
+  <%= f.text_field :model %>
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+  <%= f.label :category %>
+  <%= f.text_field :category %>
+  <%= f.label :engine %>
+  <%= f.text_field :engine %>
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+  <%= f.label :gearbox %>
+  <%= f.text_field :gearbox %>
+  <%= f.label :drivetrain %>
+  <%= f.text_field :drivetrain %>
+  <%= f.label :imageURL %>
+  <%= f.text_field :imageURL %>
+  <%= f.label :videoURL %>
+  <%= f.text_field :videoURL %>
   <%= f.submit  %>
 <% end %>

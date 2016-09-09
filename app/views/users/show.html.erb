@@ -6,8 +6,8 @@
     <h5><%= link_to bike.year + ' ' + bike.make+' - ' +bike.model, user_bike_path(@user, bike) %></h5>
   <% end %>
 <% end %>
-<%= link_to "New Bike", new_user_bike_path(@user) %>
-
+<%= link_to "New Bike", new_user_bike_path(@user)%>
+<br>
 
 <%= link_to "Edit User", edit_user_path(@user) %>
 <%= link_to "Delete", user_path(@user), :data => {
