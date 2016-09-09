@@ -1,1 +1,15 @@
 <h1><%= @user.name %></h1>
+
+<h2>Bikes Owned</h2>
+<% if @user.bikes.any? %>
+  <% @user.bikes.each do |bike| %>
+    <h5><%= link_to bike.year + ' ' + bike.make+' - ' +bike.model, user_bike_path(@user, bike) %></h5>
+  <% end %>
+<% end %>
+<%= link_to "New Bike", new_user_bike_path(@user) %>
+
+
+<%= link_to "Edit User", edit_user_path(@user) %>
+<%= link_to "Delete", user_path(@user), :data => {
+  :confirm => "Are you sure?", :method => "delete"} %>
+<%= link_to "Home", users_path %>
