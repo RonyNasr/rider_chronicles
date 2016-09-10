@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root :to => 'users#index'
 
   resources :users do
-    resources :bikes, :except => [:show, :index]
+    resources :bikes, :except => [:index]
 
   end
 end

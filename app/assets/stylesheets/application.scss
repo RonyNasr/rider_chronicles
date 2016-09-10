@@ -17,6 +17,18 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'https://fonts.googleapis.com/css?family=Bangers|Bungee+Shade|Cinzel|Coming+Soon|Creepster|Ewert|Kaushan+Script|Permanent+Marker|Shrikhand';
+
+.jumbotron{
+  text-align: center;
+  background-color: #020202;
+  h1{
+    color: orange;
+    font-family: 'Kaushan Script', cursive;
+    // font-family: 'Permanent Marker', cursive;
+  }
+}
 
 body{
+  back: #F2F2F2;
 }
