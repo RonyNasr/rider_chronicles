@@ -17,18 +17,46 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import 'https://fonts.googleapis.com/css?family=Bangers|Bungee+Shade|Cinzel|Coming+Soon|Creepster|Ewert|Kaushan+Script|Permanent+Marker|Shrikhand';
+@import 'https://fonts.googleapis.com/css?family=Kaushan+Script|Permanent+Marker|Source+Sans+Pro';
 
 .jumbotron{
+  // position: relative;
   text-align: center;
   background-color: #020202;
+  background-image: url(jumbo_2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;;
+  height: 760px;
   h1{
-    color: orange;
+    color: white;
     font-family: 'Kaushan Script', cursive;
     // font-family: 'Permanent Marker', cursive;
   }
+  // img{
+  //   height: 800px;
+  // }
 }
 
 body{
+  padding-top: 50px;
   back: #F2F2F2;
+}
+
+.container{
+  position: relative;
+}
+
+.login-form{
+
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  input{
+    color: darkgrey;
+  }
+  a{
+    color: white;
+  }
 }
