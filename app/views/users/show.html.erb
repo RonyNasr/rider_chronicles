@@ -1,4 +1,6 @@
-<h1><%= @user.name %></h1>
+
+<h1><%= image_tag @user.avatar.url(:thumb)%> <%= @user.name %></h1>
+
 
 <h2>Bikes Owned</h2>
 <% if @user.bikes.any? %>
