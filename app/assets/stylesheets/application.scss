@@ -23,7 +23,6 @@
 
 
 .jumbotron{
-  position: relative;
   text-align: center;
   background: url('jumbo_2.jpeg') no-repeat center center;
 
@@ -56,19 +55,28 @@ body{
   top: 300px;
   right: 200px;
   padding-left: 150px;
-  input{
-    color: darkgrey;
-  }
   a{
     color: white;
   }
 }
 
-.new_user{
-      width: 400px;
-}
+// .new_user{
+//       width: 400px;
+// }
+
 
 
 .navbar-right{
   margin-left: -300px;
+  .login-submit{
+    padding-top: 20px;
+  }
+}
+
+.container{
+  position: relative;
+}
+
+.home-brand{
+  padding-top: 25px;
 }

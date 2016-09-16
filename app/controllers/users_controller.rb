@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def after_update_path_for(resource)
+    user_path(current_user)
+  end
+
   def index
     @users = User.all
   end
