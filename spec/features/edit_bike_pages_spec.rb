@@ -1,8 +1,10 @@
 require "rails_helper"
+include Warden::Test::Helpers
 
 describe "the edit a bike process" do
   it "edits a bike" do
-    user = User.create(:name => 'Jack')
+    user =FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     bike = Bike.create(:make => 'BMW', :user_id => user.id)
     visit edit_user_bike_path(user,bike)
     fill_in 'Make', :with => 'Honda'
@@ -11,7 +13,8 @@ describe "the edit a bike process" do
   end
 
   it "gives error when no make is entered" do
-    user = User.create(:name => 'Jack')
+    user =FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     bike = Bike.create(:make => 'BMW', :user_id => user.id)
     visit edit_user_bike_path(user,bike)
     fill_in 'Make', :with => ''
