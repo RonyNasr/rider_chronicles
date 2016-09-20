@@ -20,3 +20,19 @@
 <%= link_to "Delete", user_bike_path(@user,@bike), :data => {
   :confirm => "Are you sure?", :method => "delete"} %> |
 <%= link_to "Back", user_path(@user) %>
+<br>
+
+<%= link_to "Add Review", new_bike_review_path(@bike) %>
+
+<% if @bike.reviews.any?%>
+  <% @bike.reviews.each do |review|%>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <%= review.title %>
+      </div>
+      <div class="panel-body">
+        <%= review.content %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
