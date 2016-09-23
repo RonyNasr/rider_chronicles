@@ -9,9 +9,10 @@ class ReviewsController < ApplicationController
     @review = @bike.reviews.new(review_params)
     @review.user_id = current_user.id
     if @review.save
-      redirect_to user_bike_path(current_user,@bike)
-    else
-      render :new
+      respond_to do |format|
+        format.html {redirect_to user_bike_path(current_user,@bike)}
+        format.js
+      end
     end
   end
 

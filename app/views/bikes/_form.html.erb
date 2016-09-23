@@ -2,46 +2,52 @@
 
 
 <%= form_for [@user, @bike] do |f| %>
-  <div class="field">
-    <%= f.label :make %>
-    <%= f.text_field :make %>
-  </div>
+  <div class="col-sm-6">
     <div class="field">
-    <%= f.label :model %>
-    <%= f.text_field :model %>
-  </div>
+      <%= f.label :make %>
+      <%= f.text_field :make %>
+    </div>
     <div class="field">
-    <%= f.label :year %>
-    <%= f.text_field :year %>
-  </div>
+      <%= f.label :model %>
+      <%= f.text_field :model %>
+    </div>
     <div class="field">
-    <%= f.label :category %>
-    <%= f.text_field :category %>
-  </div>
+      <%= f.label :year %>
+      <%= f.text_field :year %>
+    </div>
     <div class="field">
-    <%= f.label :engine %>
-    <%= f.text_field :engine %>
-  </div>
+      <%= f.label :category %>
+      <%= f.text_field :category %>
+    </div>
     <div class="field">
-    <%= f.label :color %>
-    <%= f.text_field :color %>
+      <%= f.label :engine %>
+      <%= f.text_field :engine %>
+    </div>
   </div>
+
+  <div class="col-sm-6">
     <div class="field">
-    <%= f.label :gearbox %>
-    <%= f.text_field :gearbox %>
-  </div>
+      <%= f.label :color %>
+      <%= f.text_field :color %>
+    </div>
     <div class="field">
-    <%= f.label :drivetrain %>
-    <%= f.text_field :drivetrain %>
-  </div>
+      <%= f.label :gearbox %>
+      <%= f.text_field :gearbox %>
+    </div>
     <div class="field">
-    <%= f.label :imageURL %>
-    <%= f.file_field :imageURL %>
-  </div>
+      <%= f.label :drivetrain %>
+      <%= f.text_field :drivetrain %>
+    </div>
     <div class="field">
-    <%= f.label :videoURL %>
-    <%= f.text_field :videoURL %>
+      <%= f.label :imageURL %>
+      <%= f.file_field :imageURL %>
+    </div>
+    <div class="field">
+      <%= f.label :videoURL %>
+      <%= f.text_field :videoURL %>
+    </div>
   </div>
+  
     <div class="action">
     <%= f.submit  %>
   </div>

@@ -1,0 +1,10 @@
+<%= form_for [@bike, @review], remote: true do |f| %>
+<div class="field">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :content, "Comment" %>
+  <%= f.text_field :content %>
+  <%= f.submit "add Comment", class: "btn btn-primary btn-sm"%>
+</div>
+<% end %>

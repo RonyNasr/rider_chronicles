@@ -1,16 +1,14 @@
 
-<h1><%= image_tag current_user.avatar.url(:thumb)%> <%= current_user.name %></h1>
+<h1><%= image_tag current_user.avatar.url(:thumb), class:"avatar" %> <%= current_user.name %></h1>
 <%= link_to "Edit User", edit_user_registration_path(current_user) %>
 
 
 <h2>Bikes Owned</h2>
+<%= link_to "New Bike", new_user_bike_path(current_user), :id => "add_bike", :remote => true %>
+<br>
 <% if current_user.bikes.any? %>
   <% current_user.bikes.each do |bike| %>
-    <h5><%= link_to bike.year + ' ' + bike.make+' - ' +bike.model, user_bike_path(current_user, bike) %></h5>
+    <%= render "bikes/bike", :bike => bike %> 
   <% end %>
 <% end %>
 <br>
-<%= link_to "New Bike", new_user_bike_path(current_user)%>
-
-<!-- | <%= link_to "Delete", user_path(current_user), :data => {
-  :confirm => "Are you sure?", :method => "delete"} %> | -->

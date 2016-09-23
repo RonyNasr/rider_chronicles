@@ -1,33 +1,32 @@
 class BikesController < ApplicationController
   def new
-    @user = User.find(params[:user_id])
+    @user = current_user
     @bike = @user.bikes.new
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = current_user
     @bike = @user.bikes.new(bike_params)
     if @bike.save
-      flash[:notice] = "Bike Saved!"
-      redirect_to user_path(@user)
-    else
-      flash[:alert] = "error while saving!"
-      render :new
+      respond_to do |format|
+        format.html {redirect_to user_path(@user)}
+        format.js
+      end
     end
   end
 
   def show
-    @user =User.find(params[:user_id])
+    @user =current_user
     @bike = Bike.find(params[:id])
   end
 
   def edit
-    @user =User.find(params[:user_id])
+    @user =current_user
     @bike = Bike.find(params[:id])
   end
 
   def update
-    @user =User.find(params[:user_id])
+    @user =current_user
     @bike = Bike.find(params[:id])
     if @bike.update(bike_params)
       flash[:notice] = "Bike updated successfully!"
@@ -39,7 +38,7 @@ class BikesController < ApplicationController
   end
 
   def destroy
-    @user =User.find(params[:user_id])
+    @user =current_user
     @bike = Bike.find(params[:id])
     @bike.destroy
     redirect_to user_path(@user)
