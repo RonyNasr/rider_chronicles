@@ -31,6 +31,13 @@ gem "paperclip", "~> 5.0.0"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# GMaps
+gem 'geocoder'
+gem 'gmaps4rails'
+
+gem 'bootstrap-generators'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -42,6 +49,8 @@ group :development, :test do
     gem 'simplecov', require: false
     gem 'factory_girl_rails'
     gem "letter_opener"
+    gem 'poltergeist'
+    gem 'database_cleaner'
 end
 
 group :development do

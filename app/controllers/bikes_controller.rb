@@ -12,6 +12,9 @@ class BikesController < ApplicationController
         format.html {redirect_to user_path(@user)}
         format.js
       end
+    else
+      flash[:notice] = "error while creating!"
+      redirect_to user_path(current_user)
     end
   end
 
