@@ -34,6 +34,7 @@ gem "paperclip", "~> 5.0.0"
 # GMaps
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'underscore-rails'
 
 gem 'bootstrap-generators'
 

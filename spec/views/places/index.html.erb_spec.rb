@@ -4,13 +4,13 @@ RSpec.describe "places/index", type: :view do
   before(:each) do
     assign(:places, [
       Place.create!(
-        :lattitude => 2.5,
+        :latitude => 2.5,
         :longitude => 3.5,
         :name => "Name",
         :address => "Address"
       ),
       Place.create!(
-        :lattitude => 2.5,
+        :latitude => 2.5,
         :longitude => 3.5,
         :name => "Name",
         :address => "Address"

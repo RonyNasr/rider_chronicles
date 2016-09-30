@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :places
   get 'page/home'
 
   get 'page/about'
@@ -16,6 +15,8 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :bikes, :except => [:index]
+    resources :places
+
   end
 
 end

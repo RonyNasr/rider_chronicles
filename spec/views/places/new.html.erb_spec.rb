@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "places/new", type: :view do
   before(:each) do
     assign(:place, Place.new(
-      :lattitude => 1.5,
+      :latitude => 1.5,
       :longitude => 1.5,
       :name => "MyString",
       :address => "MyString"
@@ -15,7 +15,7 @@ RSpec.describe "places/new", type: :view do
 
     assert_select "form[action=?][method=?]", places_path, "post" do
 
-      assert_select "input#place_lattitude[name=?]", "place[lattitude]"
+      assert_select "input#place_latitude[name=?]", "place[latitude]"
 
       assert_select "input#place_longitude[name=?]", "place[longitude]"
 
