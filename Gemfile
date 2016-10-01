@@ -52,6 +52,7 @@ group :development, :test do
     gem "letter_opener"
     gem 'poltergeist'
     gem 'database_cleaner'
+    gem 'dotenv'
 end
 
 group :development do

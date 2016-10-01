@@ -8,7 +8,9 @@
 <br>
 <% if current_user.bikes.any? %>
   <% current_user.bikes.each do |bike| %>
-    <%= render "bikes/bike", :bike => bike %> 
+    <%= render "bikes/bike", :bike => bike %>
   <% end %>
 <% end %>
-<br>
+<hr>
+
+<%= link_to "My Places", user_places_path(current_user) %>
