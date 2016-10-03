@@ -35,6 +35,7 @@ class BikesController < ApplicationController
       flash[:notice] = "Bike updated successfully!"
       redirect_to user_bike_path(@user,@bike)
     else
+
       flash[:alert] = "error while updating!"
       render :edit
     end

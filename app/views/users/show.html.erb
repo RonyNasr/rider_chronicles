@@ -4,6 +4,7 @@
 
 
 <h2>Bikes Owned</h2>
+<%= flash[:notice] %>
 <%= link_to "New Bike", new_user_bike_path(current_user), :id => "add_bike", :remote => true %>
 <br>
 <% if current_user.bikes.any? %>

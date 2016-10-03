@@ -23,7 +23,7 @@
 <hr>
 
 <%= link_to "Add Review", new_bike_review_path(@bike), :remote => true, :id => "add_comment"  %>
-<br>
+<hr>
 <div id="reviews_list">
   <% if @bike.reviews.any?%>
   <% @bike.reviews.each do |review|%>

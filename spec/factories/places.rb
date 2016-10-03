@@ -1,8 +1,6 @@
 FactoryGirl.define do
   factory :place do
-    latitude 1.5
-    longitude 1.5
-    name "MyString"
-    address "MyString"
+    name "Epicodus"
+    address "400 SW 6th Ave #800, Portland, OR 97204"
   end
 end

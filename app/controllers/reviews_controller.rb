@@ -13,6 +13,8 @@ class ReviewsController < ApplicationController
         format.html {redirect_to user_bike_path(current_user,@bike)}
         format.js
       end
+    else
+      redirect_to user_bike_path(current_user,@bike)
     end
   end
 
