@@ -45,17 +45,17 @@ class PlacesController < ApplicationController
 
   # PATCH/PUT /places/1
   # PATCH/PUT /places/1.json
-  def update
-    respond_to do |format|
-      if @place.update(place_params)
-        format.html { redirect_to user_places_path, notice: 'Place was successfully updated.' }
-        format.json { render :show, status: :ok, location: @place }
-      else
-        format.html { render :edit }
-        format.json { render json: @place.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @place.update(place_params)
+  #       format.html { redirect_to user_places_path, notice: 'Place was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @place }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @place.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /places/1
   # DELETE /places/1.json
